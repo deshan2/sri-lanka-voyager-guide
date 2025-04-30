@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
-import { MapPin, Calendar, Compass, Hotel, Star } from 'lucide-react';
+import { MapPin, Calendar, Compass, Hotel, Star, Briefcase, Users, Clock, MessageSquare } from 'lucide-react';
 
 const Home: React.FC = () => {
   const featuredDestinations = [
@@ -45,6 +45,30 @@ const Home: React.FC = () => {
       description: 'Explore vibrant coral reefs and shipwrecks in crystal clear waters',
       image: 'https://images.unsplash.com/photo-1629035818534-90ddbd634e9e?q=80&w=800&auto=format&fit=crop',
     },
+  ];
+
+  // Work process steps
+  const workProcess = [
+    {
+      icon: <MessageSquare className="h-12 w-12 text-srilanka-blue dark:text-srilanka-gold" />,
+      title: "Consultation",
+      description: "We begin with a detailed consultation to understand your travel preferences, interests, and expectations for your Sri Lanka adventure."
+    },
+    {
+      icon: <Briefcase className="h-12 w-12 text-srilanka-blue dark:text-srilanka-gold" />,
+      title: "Tailored Planning",
+      description: "Our expert team crafts a personalized itinerary that matches your interests, timeframe, and budget while incorporating the best of Sri Lanka."
+    },
+    {
+      icon: <Users className="h-12 w-12 text-srilanka-blue dark:text-srilanka-gold" />,
+      title: "Local Expertise",
+      description: "Benefit from our network of expert local guides who provide authentic experiences and insider knowledge of Sri Lanka's treasures."
+    },
+    {
+      icon: <Clock className="h-12 w-12 text-srilanka-blue dark:text-srilanka-gold" />,
+      title: "Seamless Experience",
+      description: "From the moment you arrive until your departure, we handle all logistics, transportation, accommodation, and activities for a stress-free journey."
+    }
   ];
 
   return (
@@ -131,8 +155,47 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Featured Destinations */}
+      {/* How We Work Section */}
       <section className="py-16 bg-muted section-fade-in hidden">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">How We Work</h2>
+            <p className="text-muted-foreground">
+              At UV Travel & Tours, we're committed to creating unforgettable Sri Lankan experiences tailored to your preferences. 
+              Our team of local experts will guide you through every step of your journey.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {workProcess.map((step, index) => (
+              <div key={index} className="bg-card rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="flex flex-col items-center text-center">
+                  <div className="mb-4">
+                    {step.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+                  <p className="text-muted-foreground">{step.description}</p>
+                </div>
+                
+                {index < workProcess.length - 1 && (
+                  <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
+                    <div className="h-1 w-4 bg-srilanka-gold"></div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-10 text-center">
+            <Button asChild className="bg-srilanka-blue hover:bg-srilanka-blue/90">
+              <a href="mailto:info@uvtravelandtours.com">Start Planning Your Trip</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Destinations */}
+      <section className="py-16 bg-background section-fade-in hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-2">Featured Destinations</h2>
@@ -178,7 +241,7 @@ const Home: React.FC = () => {
       </section>
       
       {/* Adventures Section */}
-      <section className="py-16 bg-background section-fade-in hidden">
+      <section className="py-16 bg-muted section-fade-in hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-2">Thrilling Adventures</h2>
@@ -224,7 +287,7 @@ const Home: React.FC = () => {
       </section>
       
       {/* Accommodation Section */}
-      <section className="py-16 bg-muted section-fade-in hidden">
+      <section className="py-16 bg-background section-fade-in hidden">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="md:w-1/2">

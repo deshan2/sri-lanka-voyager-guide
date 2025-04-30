@@ -1,306 +1,431 @@
-
 export interface Adventure {
   id: string;
   name: string;
-  type: 'Wildlife' | 'Water Sports' | 'Hiking' | 'Cultural';
-  location: string;
   description: string;
-  longDescription?: string;
+  longDescription: string;
   image: string;
-  gallery?: string[];
+  gallery: string[];
+  location: string;
   duration: string;
-  difficulty?: 'Easy' | 'Moderate' | 'Challenging';
-  bestTime?: string;
-  price?: string;
-  highlights?: string[];
-  itinerary?: string[];
-  whatToBring?: string[];
-  suitableFor?: string;
-  notSuitableFor?: string;
-  safetyInfo?: string;
-  groupSize?: string;
+  difficulty: "Easy" | "Moderate" | "Challenging";
+  bestTime: string;
+  included: string[];
+  notIncluded: string[];
+  highlights: string[];
+  price: number;
+  rating: number;
+  reviews: number;
 }
 
-export const adventuresData: Adventure[] = [
+const adventuresData: Adventure[] = [
   {
-    id: 'safari',
-    name: 'Leopard Safari at Yala National Park',
-    type: 'Wildlife',
-    location: 'Yala National Park',
-    description: 'Encounter leopards, elephants and exotic birds in their natural habitat on a thrilling jeep safari.',
-    longDescription: 'Embark on an unforgettable wildlife adventure at Yala National Park, home to one of the highest leopard densities in the world. Our experienced guides will take you on a journey through diverse landscapes - from dense forests to open grasslands and lagoons - in search of Sri Lanka\'s magnificent wildlife. Beyond the famous leopards, you may spot elephants, sloth bears, crocodiles, and numerous bird species in this biodiversity hotspot.',
-    image: 'https://images.unsplash.com/photo-1590668468552-21ff25a2472e?q=80&w=800&auto=format&fit=crop',
+    id: "safari",
+    name: "Wildlife Safari",
+    description: "Encounter leopards, elephants and exotic birds in their natural habitat",
+    longDescription: "Embark on an unforgettable wildlife safari through Sri Lanka's renowned national parks. Our expert guides will take you on a journey to witness the island's incredible biodiversity, including the elusive Sri Lankan leopard, majestic elephants, and countless bird species. Experience the thrill of spotting wildlife in their natural habitat while learning about conservation efforts to protect these precious ecosystems.",
+    image: "https://images.unsplash.com/photo-1590668468552-21ff25a2472e?q=80&w=800&auto=format&fit=crop",
     gallery: [
-      'https://images.unsplash.com/photo-1535359065-15675f5877b0?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1605624163222-bbc9d1cae550?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1593150341589-330a9c2d58b0?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1577951041574-35eee7c9c049?q=80&w=800&auto=format&fit=crop'
+      "https://images.unsplash.com/photo-1566146688736-5b5403e6dc9a?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1577717707588-3eceac1207a1?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1581996323777-9fde24488c9b?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1581996323777-9fde24488c9b?q=80&w=800&auto=format&fit=crop"
     ],
-    duration: '5-6 hours (half-day safari)',
-    difficulty: 'Easy',
-    bestTime: 'February to July',
-    price: '$40-80 per person',
+    location: "Yala National Park",
+    duration: "Full day (6-8 hours)",
+    difficulty: "Easy",
+    bestTime: "February to July",
+    included: [
+      "Hotel pickup and drop-off",
+      "Experienced safari guide",
+      "4x4 jeep transportation",
+      "Entrance fees",
+      "Bottled water",
+      "Breakfast or lunch (depending on tour time)"
+    ],
+    notIncluded: [
+      "Gratuities",
+      "Personal expenses",
+      "Alcoholic beverages"
+    ],
     highlights: [
-      'Search for elusive leopards in their natural habitat',
-      'Observe wild elephants, sloth bears, and crocodiles',
-      'Bird watching with over 215 species recorded in the park',
-      'Photography opportunities with diverse wildlife and landscapes',
-      'Learn about conservation efforts from knowledgeable guides'
+      "Chance to spot the elusive Sri Lankan leopard",
+      "Close encounters with wild elephants",
+      "Bird watching opportunities with over 200 species",
+      "Expert naturalist guides sharing knowledge about the ecosystem",
+      "Photography opportunities in diverse landscapes"
     ],
-    itinerary: [
-      'Early morning pickup from your accommodation (around 5:00 AM)',
-      'Drive to Yala National Park entrance and meet your safari guide',
-      'Morning safari through various zones of the park (3-4 hours)',
-      'Breakfast stop at a scenic location inside the park',
-      'Continue wildlife viewing in different habitats',
-      'Return to entrance and drop-off at your accommodation by 11:00 AM'
-    ],
-    whatToBring: [
-      'Camera with zoom lens',
-      'Binoculars',
-      'Sun hat and sunscreen',
-      'Light, neutral-colored clothing',
-      'Insect repellent',
-      'Water bottle'
-    ],
-    suitableFor: 'All ages and fitness levels; families with children',
-    notSuitableFor: 'Those with severe back problems due to bumpy roads',
-    safetyInfo: 'Always remain seated in the vehicle during the safari. Follow your guide\'s instructions at all times. Keep a safe distance from wildlife.',
-    groupSize: '4-6 people per jeep'
+    price: 85,
+    rating: 4.8,
+    reviews: 124
   },
   {
-    id: 'hiking',
-    name: 'Ella Rock Sunrise Hike',
-    type: 'Hiking',
-    location: 'Ella',
-    description: 'Trek through lush mountains and discover breathtaking viewpoints at sunrise.',
-    longDescription: 'Experience the magic of a Sri Lankan sunrise from the summit of Ella Rock on this guided hiking adventure. The journey begins with a walk along railway tracks, continues through tea plantations and forest paths, and culminates with a moderately challenging climb. Your efforts will be rewarded with spectacular panoramic views of Ella Gap, Little Adam\'s Peak, and the surrounding mountains bathed in the golden light of dawn.',
-    image: 'https://images.unsplash.com/photo-1575991996683-94471687f3d3?q=80&w=800&auto=format&fit=crop',
+    id: "hiking",
+    name: "Hiking Adventures",
+    description: "Trek through lush mountains and discover breathtaking viewpoints",
+    longDescription: "Lace up your hiking boots and explore Sri Lanka's stunning mountain landscapes on our guided hiking adventures. From the misty peaks of Knuckles Mountain Range to the scenic trails of Horton Plains, our experienced guides will lead you through diverse ecosystems while sharing insights about local flora, fauna, and cultural significance. Whether you're a casual walker or experienced hiker, we offer trails suited to various fitness levels.",
+    image: "https://images.unsplash.com/photo-1575991996683-94471687f3d3?q=80&w=800&auto=format&fit=crop",
     gallery: [
-      'https://images.unsplash.com/photo-1586537214285-cffdbd2685b2?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1590003698755-02a89a404444?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1580118797218-2506aabfbdec?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1598438521143-8a1b680c45b5?q=80&w=800&auto=format&fit=crop'
+      "https://images.unsplash.com/photo-1590739292323-b5a6e2f09b3e?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1586183189334-0f7b9227e8c9?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1586183189334-0f7b9227e8c9?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1586183189334-0f7b9227e8c9?q=80&w=800&auto=format&fit=crop"
     ],
-    duration: '4-5 hours round trip',
-    difficulty: 'Moderate',
-    bestTime: 'January to March',
-    price: '$25-40 per person with guide',
+    location: "Ella, Knuckles Mountain Range, Horton Plains",
+    duration: "4-8 hours (depending on trail)",
+    difficulty: "Moderate",
+    bestTime: "January to March, July to September",
+    included: [
+      "Professional hiking guide",
+      "Transportation to and from trailhead",
+      "Packed lunch and snacks",
+      "Water and refreshments",
+      "Entrance fees to protected areas",
+      "Basic first aid kit"
+    ],
+    notIncluded: [
+      "Hiking gear (available for rent)",
+      "Personal insurance",
+      "Gratuities",
+      "Alcoholic beverages"
+    ],
     highlights: [
-      'Spectacular sunrise views over the mountains',
-      'Walking along scenic railway tracks',
-      'Tea plantation landscapes',
-      'Local village encounters',
-      'Diverse flora and fauna spotting'
+      "Panoramic views from Little Adam's Peak",
+      "Trek through tea plantations and cloud forests",
+      "Discover hidden waterfalls and natural pools",
+      "Spot endemic wildlife and bird species",
+      "Learn about local mountain communities and their traditions"
     ],
-    itinerary: [
-      'Pre-dawn pickup from your accommodation (around 3:30-4:00 AM)',
-      'Walk along the railway tracks from Ella station',
-      'Turn off into tea plantations and forest trails',
-      'Ascend to Ella Rock summit before sunrise (moderate difficulty)',
-      'Enjoy sunrise and panoramic views at the summit',
-      'Breakfast at the summit',
-      'Descend via an alternative route with different views',
-      'Return to Ella town by mid-morning'
-    ],
-    whatToBring: [
-      'Sturdy walking shoes with good grip',
-      'Warm layer for pre-dawn temperatures',
-      'Headlamp or flashlight',
-      'Water (at least 1.5 liters)',
-      'Snacks',
-      'Camera',
-      'Rain jacket (depending on season)'
-    ],
-    suitableFor: 'Reasonably fit travelers; children 10+ years',
-    notSuitableFor: 'Those with mobility issues or fear of heights',
-    safetyInfo: 'Paths can be slippery after rain. Walking on railway tracks requires awareness of train times. A guide is recommended as the trail can be confusing.',
-    groupSize: 'Small groups of 2-8 people'
+    price: 65,
+    rating: 4.9,
+    reviews: 87
   },
   {
-    id: 'diving',
-    name: 'Scuba Diving in Trincomalee',
-    type: 'Water Sports',
-    location: 'Trincomalee',
-    description: 'Explore vibrant coral reefs and shipwrecks in crystal clear waters of the east coast.',
-    longDescription: 'Discover the underwater wonders of Sri Lanka\'s eastern coast on this scuba diving adventure in Trincomalee. The sheltered Trincomalee harbor and surrounding waters offer exceptional diving conditions with visibility often exceeding 20 meters. Explore diverse dive sites including vibrant coral gardens, dramatic reef walls, fascinating shipwrecks, and underwater caves. The area is home to numerous tropical fish species, reef sharks, rays, sea turtles, and occasional visits from larger pelagic species.',
-    image: 'https://images.unsplash.com/photo-1629035818534-90ddbd634e9e?q=80&w=800&auto=format&fit=crop',
+    id: "diving",
+    name: "Scuba Diving",
+    description: "Explore vibrant coral reefs and shipwrecks in crystal clear waters",
+    longDescription: "Dive into the underwater wonders of Sri Lanka's coastal waters with our professional scuba diving experiences. The warm Indian Ocean waters surrounding the island are home to vibrant coral reefs, fascinating shipwrecks, and an abundance of marine life including reef sharks, rays, turtles, and colorful tropical fish. Whether you're a certified diver or a beginner looking to try your first dive, our PADI-certified instructors will ensure a safe and memorable underwater adventure.",
+    image: "https://images.unsplash.com/photo-1629035818534-90ddbd634e9e?q=80&w=800&auto=format&fit=crop",
     gallery: [
-      'https://images.unsplash.com/photo-1593248554713-a897abc4ee0c?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1499242611767-cf8b9be02854?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop'
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop"
     ],
-    duration: '4-6 hours (including 2 dives)',
-    difficulty: 'Moderate',
-    bestTime: 'April to October',
-    price: '$80-120 per person for two-tank dive',
+    location: "Hikkaduwa, Unawatuna, Trincomalee",
+    duration: "Half day (3-4 hours)",
+    difficulty: "Moderate",
+    bestTime: "November to April (Southwest coast), May to October (Northeast coast)",
+    included: [
+      "PADI-certified diving instructor",
+      "Complete diving equipment",
+      "Boat transportation to dive sites",
+      "Refreshments and snacks",
+      "Underwater photos/videos",
+      "Diving logbook stamp"
+    ],
+    notIncluded: [
+      "PADI certification fees (for certification courses)",
+      "Personal diving insurance",
+      "Gratuities",
+      "Hotel transfers (available at additional cost)"
+    ],
     highlights: [
-      'Pigeon Island marine sanctuary with abundant reef life',
-      'HMS Hermes shipwreck - world\'s first purpose-built aircraft carrier',
-      'British Sergeant wreck with schools of barracuda',
-      'Seven Sisters coral reef formation',
-      'Possibility of encountering sea turtles, reef sharks, and rays'
+      "Explore vibrant coral gardens teeming with marine life",
+      "Discover historic shipwrecks including WWII vessels",
+      "Swim alongside sea turtles, reef sharks, and rays",
+      "Visit underwater caves and rock formations",
+      "Opportunity to see seasonal visitors like whale sharks and manta rays"
     ],
-    itinerary: [
-      'Morning pickup from your accommodation',
-      'Safety briefing and equipment fitting at dive center',
-      'Boat ride to first dive site',
-      'First dive (45-50 minutes depending on depth)',
-      'Surface interval with refreshments on boat',
-      'Second dive at different site',
-      'Return to shore and equipment cleaning',
-      'Debrief and log book signing',
-      'Return to accommodation by early afternoon'
-    ],
-    whatToBring: [
-      'Swimwear',
-      'Towel',
-      'Sunscreen (reef-safe)',
-      'Sunglasses',
-      'Certification card for certified divers',
-      'Personal diving equipment (if preferred, otherwise provided)'
-    ],
-    suitableFor: 'Certified divers (Discover Scuba experiences available for beginners)',
-    notSuitableFor: 'Those with certain medical conditions; pregnant women',
-    safetyInfo: 'All dives are conducted by PADI certified instructors with safety equipment on board. Participants must complete a health questionnaire before diving. No flying within 24 hours after diving.',
-    groupSize: '4-6 divers per instructor'
+    price: 120,
+    rating: 4.7,
+    reviews: 56
   },
   {
-    id: 'white-water-rafting',
-    name: 'White Water Rafting on Kelani River',
-    type: 'Water Sports',
-    location: 'Kitulgala',
-    description: 'Experience thrilling rapids and lush rainforest scenery on Sri Lanka\'s premier rafting river.',
-    image: 'https://images.unsplash.com/photo-1440186347098-386b7459ad6b?q=80&w=800&auto=format&fit=crop',
-    duration: '3-4 hours',
-    difficulty: 'Moderate',
-    bestTime: 'May to December (after monsoon for higher water levels)',
-    price: '$30-50 per person',
-    highlights: [
-      'Navigate through 5-7 exciting rapids',
-      'Swim in calm sections of the river',
-      'Lush rainforest scenery',
-      'Visit filming locations from "The Bridge on the River Kwai"',
-      'Professional guides with safety equipment'
+    id: "surfing",
+    name: "Surf Lessons",
+    description: "Catch your first wave or improve your skills on Sri Lanka's best surf beaches",
+    longDescription: "Experience the thrill of surfing on Sri Lanka's world-renowned beaches with our professional surf lessons. Whether you're a complete beginner looking to stand up on your first wave or an intermediate surfer wanting to improve your technique, our experienced instructors will provide personalized coaching in safe and suitable conditions. Sri Lanka offers ideal surfing conditions with warm water, consistent waves, and beautiful beach settings perfect for learning this exciting sport.",
+    image: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=800&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=800&auto=format&fit=crop"
     ],
-    suitableFor: 'Adults and children over 10 years with basic swimming ability',
-    notSuitableFor: 'Pregnant women; those with heart conditions; non-swimmers',
-    safetyInfo: 'All participants must wear life jackets and helmets. Listen carefully to safety briefings and guide instructions.',
-    groupSize: '4-8 people per raft'
+    location: "Arugam Bay, Weligama, Hikkaduwa",
+    duration: "2 hours",
+    difficulty: "Moderate",
+    bestTime: "November to April (Southwest coast), May to September (East coast)",
+    included: [
+      "Qualified surf instructor",
+      "Surfboard rental",
+      "Rash guard",
+      "Beach safety briefing",
+      "Photos of your surfing experience",
+      "Refreshments"
+    ],
+    notIncluded: [
+      "Transportation to beach (available at additional cost)",
+      "Personal travel insurance",
+      "Gratuities"
+    ],
+    highlights: [
+      "Learn from certified instructors with local knowledge",
+      "Small group sizes for personalized attention",
+      "Suitable for all ages and fitness levels",
+      "Beautiful beach settings with good learning conditions",
+      "Progress tracking and technique improvement tips"
+    ],
+    price: 45,
+    rating: 4.9,
+    reviews: 103
   },
   {
-    id: 'cultural-tour',
-    name: 'Sacred City of Anuradhapura Cycling Tour',
-    type: 'Cultural',
-    location: 'Anuradhapura',
-    description: 'Explore the ancient capital and its sacred sites by bicycle with an expert local guide.',
-    image: 'https://images.unsplash.com/photo-1625048844917-8193a3818087?q=80&w=800&auto=format&fit=crop',
-    duration: 'Full day (6-7 hours)',
-    difficulty: 'Easy',
-    bestTime: 'Year-round (early morning starts recommended)',
-    price: '$40-60 per person',
-    highlights: [
-      'Visit the sacred Sri Maha Bodhi tree (over 2,000 years old)',
-      'Explore massive stupas including Ruwanwelisaya and Jetavanaramaya',
-      'Discover ancient pools and palaces',
-      'Learn about Buddhist history and culture',
-      'Experience local village life between sites'
+    id: "cooking",
+    name: "Sri Lankan Cooking Class",
+    description: "Learn to prepare authentic Sri Lankan dishes with local ingredients and traditional methods",
+    longDescription: "Discover the secrets of Sri Lankan cuisine in our hands-on cooking classes led by experienced local chefs. You'll visit a traditional market to select fresh ingredients before learning to prepare authentic dishes like fragrant rice and curry, hoppers, sambols, and tropical desserts. Understand the unique blend of spices and techniques that make Sri Lankan food so distinctive. The class culminates in enjoying the delicious meal you've prepared in a beautiful setting, with recipes to take home so you can recreate the flavors of Sri Lanka anywhere in the world.",
+    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop"
     ],
-    suitableFor: 'All ages with basic cycling ability',
-    notSuitableFor: 'Those unable to ride a bicycle',
-    safetyInfo: 'Wear appropriate clothing for visiting religious sites. Stay hydrated in the tropical heat.',
-    groupSize: '2-8 people'
+    location: "Galle, Kandy, Colombo",
+    duration: "4-5 hours",
+    difficulty: "Easy",
+    bestTime: "Year-round",
+    included: [
+      "Market tour with ingredient selection",
+      "All cooking ingredients and equipment",
+      "Hands-on instruction from professional chef",
+      "Full meal of prepared dishes",
+      "Beverage pairing (including local tea or beer)",
+      "Recipe booklet to take home"
+    ],
+    notIncluded: [
+      "Hotel transfers (available at additional cost)",
+      "Additional alcoholic beverages",
+      "Gratuities"
+    ],
+    highlights: [
+      "Learn 5-7 authentic Sri Lankan recipes",
+      "Discover the use of unique spices and ingredients",
+      "Understand traditional cooking techniques",
+      "Take home recipe cards to recreate dishes",
+      "Enjoy the fruits of your labor with a communal meal"
+    ],
+    price: 55,
+    rating: 4.8,
+    reviews: 72
   },
   {
-    id: 'surf-lessons',
-    name: 'Surf Lessons in Arugam Bay',
-    type: 'Water Sports',
-    location: 'Arugam Bay',
-    description: 'Learn to surf or improve your skills at one of Asia\'s premier surfing destinations.',
-    image: 'https://images.unsplash.com/photo-1526342731301-a6e5d10ebb6f?q=80&w=800&auto=format&fit=crop',
-    duration: '2 hours per lesson',
-    difficulty: 'Easy to Challenging (depending on level)',
-    bestTime: 'May to September',
-    price: '$25-40 per lesson',
-    highlights: [
-      'Professional instruction from experienced local surfers',
-      'Equipment provided (surfboard and rash vest)',
-      'Various spots suitable for different skill levels',
-      'Video analysis of your technique (in multi-day packages)',
-      'Small group sizes for personalized attention'
+    id: "whitewater",
+    name: "Whitewater Rafting",
+    description: "Navigate thrilling rapids on Sri Lanka's scenic rivers with expert guides",
+    longDescription: "Experience the excitement of whitewater rafting on Sri Lanka's beautiful Kelani River, featured in the movie 'Bridge on the River Kwai'. Our professional guides will lead you through exhilarating rapids ranging from Grade 2 to Grade 4, surrounded by lush rainforest scenery. After a comprehensive safety briefing and paddling instruction, you'll navigate through the rushing waters, working as a team to maneuver through rapids with names like 'Butter Crunch' and 'Killer Fall'. This adventure offers the perfect mix of adrenaline and natural beauty for thrill-seekers of all experience levels.",
+    image: "https://images.unsplash.com/photo-1530866495561-507c9faab2e9?q=80&w=800&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1530866495561-507c9faab2e9?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1530866495561-507c9faab2e9?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1530866495561-507c9faab2e9?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1530866495561-507c9faab2e9?q=80&w=800&auto=format&fit=crop"
     ],
-    suitableFor: 'Anyone with basic swimming ability',
-    notSuitableFor: 'Non-swimmers',
-    safetyInfo: 'Always follow instructor\'s guidance about surf conditions and safe zones.',
-    groupSize: 'Maximum 4 students per instructor'
+    location: "Kitulgala",
+    duration: "3-4 hours",
+    difficulty: "Moderate",
+    bestTime: "May to December (water levels dependent)",
+    included: [
+      "Professional rafting guides",
+      "All rafting equipment (raft, paddle, helmet, life jacket)",
+      "Safety briefing and instruction",
+      "Changing facilities and secure storage",
+      "Post-rafting refreshments",
+      "Photos of your adventure"
+    ],
+    notIncluded: [
+      "Transportation to Kitulgala (available at additional cost)",
+      "Personal travel insurance",
+      "Dry clothes for after rafting",
+      "Gratuities"
+    ],
+    highlights: [
+      "Navigate through 5-9 exciting rapids",
+      "Stunning scenery of the Kelani River gorge",
+      "Swimming opportunities in calm sections",
+      "Professional guides with safety training",
+      "Suitable for beginners and experienced rafters alike"
+    ],
+    price: 75,
+    rating: 4.7,
+    reviews: 89
   },
   {
-    id: 'adam-peak',
-    name: 'Adam\'s Peak Pilgrimage Climb',
-    type: 'Hiking',
-    location: 'Central Highlands',
-    description: 'Join pilgrims on the sacred night climb to witness an unforgettable sunrise and the mysterious shadow of the peak.',
-    image: 'https://images.unsplash.com/photo-1588288659881-31a1111f10f0?q=80&w=800&auto=format&fit=crop',
-    duration: '7-8 hours round trip',
-    difficulty: 'Challenging',
-    bestTime: 'December to April (pilgrimage season)',
-    price: '$30-50 per person with guide',
-    highlights: [
-      'Night climb up 5,500 steps by lamplight',
-      'Join Buddhist, Hindu, Muslim and Christian pilgrims',
-      'Witness spectacular sunrise',
-      'Experience the mysterious triangular shadow cast by the peak',
-      'Visit the sacred footprint shrine at the summit'
+    id: "cycling",
+    name: "Cultural Cycling Tour",
+    description: "Pedal through rural villages, ancient ruins and scenic landscapes",
+    longDescription: "Discover Sri Lanka's hidden treasures on our guided cycling tours that take you off the beaten path through picturesque villages, rice paddies, and historical sites. Riding at a leisurely pace on mostly flat terrain, you'll experience authentic local life while enjoying the beautiful countryside. Our knowledgeable guides will share insights about rural Sri Lankan culture, traditional farming practices, and historical significance of ancient sites you'll visit along the way. This eco-friendly adventure offers a unique perspective of Sri Lanka that most tourists never experience.",
+    image: "https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=800&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=800&auto=format&fit=crop"
     ],
-    suitableFor: 'Physically fit individuals',
-    notSuitableFor: 'Those with knee problems or limited mobility',
-    safetyInfo: 'The climb involves thousands of steps and can be strenuous. Cold temperatures at the summit require warm clothing.',
-    groupSize: 'Small groups of 2-8 people'
+    location: "Anuradhapura, Polonnaruwa, Sigiriya surroundings",
+    duration: "Half day (4-5 hours)",
+    difficulty: "Easy",
+    bestTime: "January to March, July to September",
+    included: [
+      "Quality mountain or hybrid bike",
+      "Helmet and safety equipment",
+      "Local English-speaking guide",
+      "Water and refreshments",
+      "Fresh fruit and snack breaks",
+      "Support vehicle (for longer tours)"
+    ],
+    notIncluded: [
+      "Hotel transfers (available at additional cost)",
+      "Personal travel insurance",
+      "Gratuities",
+      "Entrance fees to optional sites"
+    ],
+    highlights: [
+      "Cycle through scenic countryside and rural villages",
+      "Visit ancient temples and historical sites",
+      "Interact with local villagers and farmers",
+      "Sample fresh tropical fruits and local snacks",
+      "Learn about traditional farming and crafts"
+    ],
+    price: 60,
+    rating: 4.9,
+    reviews: 64
   },
   {
-    id: 'whale-watching',
-    name: 'Blue Whale Watching Expedition',
-    type: 'Wildlife',
-    location: 'Mirissa',
-    description: 'Witness the largest animals on earth in their natural habitat off the southern coast of Sri Lanka.',
-    image: 'https://images.unsplash.com/photo-1566543396824-66e89e4b8933?q=80&w=800&auto=format&fit=crop',
-    duration: '4-6 hours',
-    difficulty: 'Easy',
-    bestTime: 'November to April',
-    price: '$50-80 per person',
-    highlights: [
-      'Opportunity to see blue whales, sperm whales, and fin whales',
-      'Dolphin encounters (spinner, bottlenose)',
-      'Possible sightings of flying fish and sea turtles',
-      'Experienced guides and crew',
-      'Morning refreshments on board'
+    id: "waterfall",
+    name: "Waterfall Abseiling",
+    description: "Descend alongside cascading waterfalls in a thrilling rappelling adventure",
+    longDescription: "Experience the ultimate adventure thrill as you abseil down Sri Lanka's magnificent waterfalls. After a comprehensive safety briefing and training session, you'll harness up and descend alongside rushing cascades, controlling your own descent with expert guides supervising every step. Feel the refreshing spray of the falls as you make your way down the rock face, taking in breathtaking views that few get to experience. This activity combines technical skill with natural beauty for an unforgettable adventure that will test your courage and reward you with an incredible sense of achievement.",
+    image: "https://images.unsplash.com/photo-1544551763-92ab472cad5d?q=80&w=800&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1544551763-92ab472cad5d?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544551763-92ab472cad5d?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544551763-92ab472cad5d?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544551763-92ab472cad5d?q=80&w=800&auto=format&fit=crop"
     ],
-    suitableFor: 'All ages, but be aware of potential seasickness',
-    notSuitableFor: 'Those prone to severe seasickness or with mobility issues',
-    safetyInfo: 'Life jackets provided. The boat will maintain responsible distances from whales as per wildlife viewing guidelines.',
-    groupSize: 'Varies by boat size'
+    location: "Kitulgala, Knuckles Mountain Range",
+    duration: "Full day (6-7 hours)",
+    difficulty: "Challenging",
+    bestTime: "January to March, July to September",
+    included: [
+      "Professional canyoning instructors",
+      "All technical equipment (harness, helmet, ropes, etc.)",
+      "Comprehensive safety briefing",
+      "Waterproof bags for personal items",
+      "Packed lunch and refreshments",
+      "Photos and videos of your adventure"
+    ],
+    notIncluded: [
+      "Transportation to location (available at additional cost)",
+      "Personal travel insurance",
+      "Dry clothes for after activity",
+      "Gratuities"
+    ],
+    highlights: [
+      "Abseil down 3-5 different waterfalls",
+      "Heights ranging from 10 to 40 meters",
+      "Swimming in natural pools between descents",
+      "Stunning rainforest and mountain scenery",
+      "Professional guides with extensive safety training"
+    ],
+    price: 95,
+    rating: 4.8,
+    reviews: 42
   },
   {
-    id: 'traditional-cooking',
-    name: 'Traditional Sri Lankan Cooking Class',
-    type: 'Cultural',
-    location: 'Galle',
-    description: 'Learn to prepare authentic Sri Lankan dishes with local ingredients and traditional methods.',
-    image: 'https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2?q=80&w=800&auto=format&fit=crop',
-    duration: '4-5 hours',
-    difficulty: 'Easy',
-    bestTime: 'Year-round',
-    price: '$40-60 per person',
-    highlights: [
-      'Market visit to select fresh ingredients',
-      'Learn to prepare 5-7 authentic dishes',
-      'Master the art of Sri Lankan spices',
-      'Enjoy the meal you\'ve created',
-      'Recipe booklet to take home'
+    id: "hotair",
+    name: "Hot Air Balloon Ride",
+    description: "Soar above Sri Lanka's cultural triangle for breathtaking aerial views",
+    longDescription: "Float gently above Sri Lanka's spectacular landscapes on a magical hot air balloon adventure at dawn. As the sun rises, you'll drift over ancient ruins, lush forests, lakes, and villages, gaining a bird's eye perspective of the island's beauty. Watch for wildlife from above as elephants and other animals begin their day. Your experienced pilot will point out landmarks and share insights about the regions you're flying over. After landing, celebrate your flight with a traditional champagne toast and breakfast, receiving a flight certificate to commemorate your journey through the skies of Sri Lanka.",
+    image: "https://images.unsplash.com/photo-1464059728276-d2d9f2439a5e?q=80&w=800&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1464059728276-d2d9f2439a5e?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1464059728276-d2d9f2439a5e?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1464059728276-d2d9f2439a5e?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1464059728276-d2d9f2439a5e?q=80&w=800&auto=format&fit=crop"
     ],
-    suitableFor: 'All cooking skill levels; families with older children',
-    notSuitableFor: 'Very young children',
-    safetyInfo: 'Inform instructor of any food allergies in advance.',
-    groupSize: '2-8 participants'
+    location: "Dambulla, Sigiriya, Kandalama",
+    duration: "3-4 hours (including 1 hour flight)",
+    difficulty: "Easy",
+    bestTime: "November to April",
+    included: [
+      "Hotel pickup and drop-off",
+      "Pre-flight coffee and tea",
+      "1-hour hot air balloon flight",
+      "Experienced pilot and ground crew",
+      "Post-flight champagne breakfast",
+      "Flight certificate",
+      "Comprehensive insurance"
+    ],
+    notIncluded: [
+      "Personal travel insurance",
+      "Gratuities",
+      "Souvenir photos (available for purchase)"
+    ],
+    highlights: [
+      "Sunrise views over Sri Lanka's cultural triangle",
+      "Aerial perspective of ancient ruins and landmarks",
+      "Potential wildlife sightings from above",
+      "Peaceful and serene floating experience",
+      "Champagne celebration after landing"
+    ],
+    price: 195,
+    rating: 4.9,
+    reviews: 38
+  },
+  {
+    id: "yoga",
+    name: "Beachside Yoga Retreat",
+    description: "Rejuvenate your mind and body with yoga sessions by the Indian Ocean",
+    longDescription: "Immerse yourself in tranquility with our beachside yoga retreats that combine ancient practice with Sri Lanka's natural beauty. Led by experienced yoga instructors, sessions take place on serene beaches or peaceful gardens with the soothing sounds of waves as your backdrop. Whether you're a beginner or experienced practitioner, classes are tailored to all levels, focusing on alignment, breathing, and mindfulness. Beyond yoga, enjoy meditation sessions, healthy cuisine featuring local ingredients, and free time to explore the surrounding natural beauty or simply relax by the ocean.",
+    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop"
+    ],
+    location: "Mirissa, Unawatuna, Tangalle",
+    duration: "2 hours per session (multi-day packages available)",
+    difficulty: "Moderate",
+    bestTime: "Year-round",
+    included: [
+      "Professional yoga instruction",
+      "Yoga mats and props",
+      "Herbal tea and fresh fruit",
+      "Meditation guidance",
+      "Beach or garden venue",
+      "Optional ayurvedic consultation"
+    ],
+    notIncluded: [
+      "Accommodation (for single sessions)",
+      "Meals (included in retreat packages)",
+      "Transportation to location",
+      "Personal travel insurance",
+      "Gratuities"
+    ],
+    highlights: [
+      "Practice yoga with ocean views and sea breezes",
+      "Learn techniques adaptable to all skill levels",
+      "Combine physical exercise with mental relaxation",
+      "Experience meditation in natural settings",
+      "Connect with like-minded travelers"
+    ],
+    price: 25,
+    rating: 4.8,
+    reviews: 56
   }
 ];
+
+export default adventuresData;
