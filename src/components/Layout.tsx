@@ -5,7 +5,6 @@ import Lenis from '@studio-freight/lenis';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Chatbot from './Chatbot';
-import DarkModeToggle from './DarkModeToggle';
 
 const Layout: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -73,7 +72,6 @@ const Layout: React.FC = () => {
       <main className="flex-grow pt-16">
         <Outlet />
       </main>
-      <DarkModeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <Chatbot />
       <Footer />
     </div>

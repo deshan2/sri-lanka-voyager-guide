@@ -14,6 +14,7 @@ import AdventureDetail from "./pages/AdventureDetail";
 import Accommodations from "./pages/Accommodations";
 import NotFound from "./pages/NotFound";
 
+// Create a QueryClient instance
 const queryClient = new QueryClient();
 
 const App = () => (
