@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -201,7 +202,7 @@ const AdventureDetail: React.FC = () => {
                       <DollarSign className="w-5 h-5 mr-3 text-srilanka-green dark:text-srilanka-gold flex-shrink-0 mt-1" />
                       <div>
                         <div className="font-medium">Price Range</div>
-                        <div className="text-muted-foreground">{adventure.price}</div>
+                        <div className="text-muted-foreground">${adventure.price}</div>
                       </div>
                     </div>
                   )}
