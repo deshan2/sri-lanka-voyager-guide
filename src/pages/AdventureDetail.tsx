@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -6,7 +5,7 @@ import {
   MapPin, Calendar, ArrowLeft, Clock, Activity, 
   ThumbsUp, AlertTriangle, DollarSign, Users 
 } from 'lucide-react';
-import { adventuresData } from '../data/adventuresData';
+import adventuresData from '../data/adventuresData';
 
 const AdventureDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();

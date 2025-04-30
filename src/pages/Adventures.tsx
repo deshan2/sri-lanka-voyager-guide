@@ -1,10 +1,9 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Compass, Search, Tag, MapPin } from 'lucide-react';
-import { adventuresData } from '../data/adventuresData';
+import adventuresData from '../data/adventuresData';
 
 type AdventureType = 'Wildlife' | 'Water Sports' | 'Hiking' | 'Cultural' | 'All';
 

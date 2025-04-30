@@ -1,3 +1,4 @@
+
 export interface Adventure {
   id: string;
   name: string;
@@ -17,6 +18,7 @@ export interface Adventure {
   reviews: number;
 }
 
+// Export the adventures data as default
 const adventuresData: Adventure[] = [
   {
     id: "safari",
