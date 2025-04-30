@@ -1,3 +1,4 @@
+
 export interface Adventure {
   id: string;
   name: string;
@@ -588,3 +589,24 @@ const adventuresData: Adventure[] = [
     ],
     safetyInfo: "Inform instructor of any physical limitations.",
     suitableFor: "All fitness levels",
+    groupSize: "5-15 participants per class",
+    price: 40,
+    rating: 4.8,
+    reviews: 59,
+    whatToBring: [
+      "Comfortable clothing",
+      "Water bottle",
+      "Small towel",
+      "Sunscreen"
+    ],
+    itinerary: [
+      "Welcome and introduction",
+      "Initial breathing exercises",
+      "Guided yoga practice",
+      "Meditation session",
+      "Refreshments and discussion"
+    ]
+  }
+];
+
+export default adventuresData;
