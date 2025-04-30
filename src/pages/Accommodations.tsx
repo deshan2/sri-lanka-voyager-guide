@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Hotel, Star, MapPin, Wifi, Coffee, Utensils, Swim, Wind } from 'lucide-react';
+import { Hotel, Star, MapPin, Wifi, Coffee, Utensils, Waves, Wind } from 'lucide-react';
 
 const accommodations = [
   {
@@ -155,7 +154,7 @@ const Accommodations: React.FC = () => {
                 
                 <div className="mb-4 flex flex-wrap items-center">
                   <MapPin size={16} className="mr-1 text-srilanka-green dark:text-srilanka-gold" />
-                  <span className="text-sm">Popular in: </span>
+                  <span className="text-sm">Popular in: </span> 
                   <span className="text-sm font-medium">
                     {accommodation.locations.join(', ')}
                   </span>
@@ -208,7 +207,7 @@ const Accommodations: React.FC = () => {
               </p>
             </div>
             <div className="bg-card rounded-lg p-6 text-center">
-              <Swim className="h-10 w-10 mx-auto mb-4 text-srilanka-green dark:text-srilanka-gold" />
+              <Waves className="h-10 w-10 mx-auto mb-4 text-srilanka-green dark:text-srilanka-gold" />
               <h3 className="font-semibold">Swimming Pool</h3>
               <p className="text-sm text-muted-foreground mt-2">
                 Many properties feature swimming pools for relaxation and refreshment.
