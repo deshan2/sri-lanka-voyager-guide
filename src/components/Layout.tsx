@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import Lenis from '@studio-freight/lenis';
@@ -13,10 +14,9 @@ const Layout: React.FC = () => {
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      // Removing the gestureDirection property as it's not supported
-      smooth: true,
+      // Using only properties supported by LenisOptions
+      smoothWheel: true,
       mouseMultiplier: 1,
-      smoothTouch: false,
       touchMultiplier: 2,
       infinite: false,
     });
