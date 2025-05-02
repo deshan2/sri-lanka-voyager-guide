@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
-import { MapPin, Calendar, Compass, Hotel, Star, Briefcase, Users, Clock, MessageSquare } from 'lucide-react';
+import { MapPin, Calendar, Compass, Hotel, Star, Briefcase, Users, Clock, MessageSquare, Coffee, Sun, Utensils, GraduationCap, Leaf } from 'lucide-react';
 
 const Home: React.FC = () => {
   const featuredDestinations = [
@@ -71,6 +71,49 @@ const Home: React.FC = () => {
     }
   ];
 
+  // Sri Lankan culture highlights
+  const culturalHighlights = [
+    {
+      icon: <Coffee className="h-8 w-8 text-srilanka-gold" />,
+      title: "Ceylon Tea",
+      description: "Discover Sri Lanka's world-famous tea plantations and learn about the art of tea production."
+    },
+    {
+      icon: <Utensils className="h-8 w-8 text-srilanka-gold" />,
+      title: "Authentic Cuisine",
+      description: "Savor the rich flavors of Sri Lankan cuisine, from spicy curries to fresh seafood delicacies."
+    },
+    {
+      icon: <GraduationCap className="h-8 w-8 text-srilanka-gold" />,
+      title: "Ayurvedic Tradition",
+      description: "Experience ancient healing practices through authentic Ayurvedic treatments and wellness rituals."
+    },
+    {
+      icon: <Leaf className="h-8 w-8 text-srilanka-gold" />,
+      title: "Craftsmanship",
+      description: "Witness skilled artisans practice traditional crafts like mask making, batik, and gem cutting."
+    }
+  ];
+
+  // Best time to visit information
+  const bestTimeInfo = [
+    {
+      season: "December to March",
+      description: "Perfect for the southwest coast and hill country with dry, sunny weather.",
+      activities: "Beach holidays, wildlife safaris, and cultural exploration."
+    },
+    {
+      season: "May to September",
+      description: "Ideal for the east coast, north, and ancient cities with minimal rainfall.",
+      activities: "Diving, snorkeling, and visiting historical sites."
+    },
+    {
+      season: "April and September-November",
+      description: "Shoulder seasons with fewer tourists and moderate weather conditions.",
+      activities: "Lower prices, cultural experiences, and wildlife viewing."
+    }
+  ];
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -85,10 +128,10 @@ const Home: React.FC = () => {
         </div>
         
         <div className="relative z-10 container mx-auto h-full flex flex-col justify-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-shadow">
+          <h1 className="text-4xl md:text-7xl font-bold mb-4 text-shadow font-playfair italic">
             Discover the Wonder of <span className="text-srilanka-gold">Sri Lanka</span>
           </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl text-shadow">
+          <p className="text-lg md:text-2xl mb-8 max-w-2xl text-shadow font-light">
             Experience the magic of ancient civilizations, breathtaking landscapes, and vibrant culture with UV Travel & Tours
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -110,8 +153,8 @@ const Home: React.FC = () => {
       <section className="py-16 bg-background section-fade-in hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Welcome to Paradise Island</h2>
-            <p className="text-muted-foreground">
+            <h2 className="text-3xl font-bold mb-4 font-playfair">Welcome to Paradise Island</h2>
+            <p className="text-muted-foreground text-lg">
               Sri Lanka, once known as Ceylon, is an island nation in the Indian Ocean with a history spanning over 3,000 years. 
               From ancient ruins to colonial fortresses, from misty mountains to pristine beaches, Sri Lanka offers diverse 
               experiences in a compact setting.
@@ -121,7 +164,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-card rounded-lg p-6 shadow-sm flex flex-col items-center text-center">
               <Calendar className="h-12 w-12 text-srilanka-blue dark:text-srilanka-gold mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Rich History</h3>
+              <h3 className="text-xl font-semibold mb-2 font-playfair">Rich History</h3>
               <p className="text-muted-foreground">
                 Explore ancient kingdoms, colonial heritage, and sacred sites dating back to the 3rd century BC.
               </p>
@@ -132,7 +175,7 @@ const Home: React.FC = () => {
             
             <div className="bg-card rounded-lg p-6 shadow-sm flex flex-col items-center text-center">
               <MapPin className="h-12 w-12 text-srilanka-blue dark:text-srilanka-gold mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Beautiful Landscapes</h3>
+              <h3 className="text-xl font-semibold mb-2 font-playfair">Beautiful Landscapes</h3>
               <p className="text-muted-foreground">
                 Discover pristine beaches, misty mountains, lush tea plantations, and vibrant wildlife reserves.
               </p>
@@ -143,7 +186,7 @@ const Home: React.FC = () => {
             
             <div className="bg-card rounded-lg p-6 shadow-sm flex flex-col items-center text-center">
               <Star className="h-12 w-12 text-srilanka-blue dark:text-srilanka-gold mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Cultural Experiences</h3>
+              <h3 className="text-xl font-semibold mb-2 font-playfair">Cultural Experiences</h3>
               <p className="text-muted-foreground">
                 Immerse yourself in colorful festivals, traditional dance, authentic cuisine, and warm hospitality.
               </p>
@@ -155,12 +198,68 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Cultural Highlights Section */}
+      <section className="py-16 bg-srilanka-blue/10 dark:bg-srilanka-blue/5 section-fade-in hidden">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 font-playfair">Experience Sri Lankan Culture</h2>
+            <p className="text-muted-foreground text-lg">
+              Immerse yourself in the rich cultural tapestry of Sri Lanka, where ancient traditions blend harmoniously with modern influences.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {culturalHighlights.map((highlight, index) => (
+              <div key={index} className="bg-card rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="flex flex-col items-center text-center">
+                  <div className="p-3 rounded-full bg-muted mb-4">
+                    {highlight.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 font-playfair">{highlight.title}</h3>
+                  <p className="text-muted-foreground">{highlight.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Best Time to Visit */}
+      <section className="py-16 bg-background section-fade-in hidden">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 font-playfair">When To Visit</h2>
+            <p className="text-muted-foreground text-lg">
+              Sri Lanka's climate varies by region, offering year-round travel opportunities. Here's our guide to the best times to visit:
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {bestTimeInfo.map((season, index) => (
+              <div key={index} className="bg-card rounded-lg overflow-hidden shadow-sm">
+                <div className="p-6">
+                  <div className="flex items-center mb-4">
+                    <Sun className="h-6 w-6 text-srilanka-gold mr-2" />
+                    <h3 className="text-xl font-semibold font-playfair">{season.season}</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">{season.description}</p>
+                  <div className="bg-muted p-3 rounded-md">
+                    <p className="text-sm font-semibold">Recommended activities:</p>
+                    <p className="text-sm">{season.activities}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How We Work Section */}
       <section className="py-16 bg-muted section-fade-in hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">How We Work</h2>
-            <p className="text-muted-foreground">
+            <h2 className="text-3xl font-bold mb-4 font-playfair">How We Work</h2>
+            <p className="text-muted-foreground text-lg">
               At UV Travel & Tours, we're committed to creating unforgettable Sri Lankan experiences tailored to your preferences. 
               Our team of local experts will guide you through every step of your journey.
             </p>
@@ -173,7 +272,7 @@ const Home: React.FC = () => {
                   <div className="mb-4">
                     {step.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+                  <h3 className="text-xl font-semibold mb-3 font-playfair">{step.title}</h3>
                   <p className="text-muted-foreground">{step.description}</p>
                 </div>
                 
@@ -198,8 +297,8 @@ const Home: React.FC = () => {
       <section className="py-16 bg-background section-fade-in hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-2">Featured Destinations</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-2 font-playfair">Featured Destinations</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               Explore these handpicked destinations that showcase the best of Sri Lanka's cultural heritage and natural beauty.
             </p>
           </div>
@@ -220,7 +319,7 @@ const Home: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 </div>
                 <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-xl font-semibold mb-2">{destination.name}</h3>
+                  <h3 className="text-xl font-semibold mb-2 font-playfair">{destination.name}</h3>
                   <p className="text-muted-foreground flex-1">{destination.description}</p>
                   <div className="mt-4 flex justify-end">
                     <span className="text-srilanka-green dark:text-srilanka-gold font-medium">
@@ -244,8 +343,8 @@ const Home: React.FC = () => {
       <section className="py-16 bg-muted section-fade-in hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-2">Thrilling Adventures</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-2 font-playfair">Thrilling Adventures</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               Seek out excitement and create unforgettable memories with these amazing adventure activities across Sri Lanka.
             </p>
           </div>
@@ -266,7 +365,7 @@ const Home: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 </div>
                 <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-xl font-semibold mb-2">{adventure.name}</h3>
+                  <h3 className="text-xl font-semibold mb-2 font-playfair">{adventure.name}</h3>
                   <p className="text-muted-foreground flex-1">{adventure.description}</p>
                   <div className="mt-4 flex justify-end">
                     <span className="text-srilanka-green dark:text-srilanka-gold font-medium">
@@ -298,8 +397,8 @@ const Home: React.FC = () => {
               />
             </div>
             <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-4">Find Your Perfect Stay</h2>
-              <p className="text-muted-foreground mb-6">
+              <h2 className="text-3xl font-bold mb-4 font-playfair">Find Your Perfect Stay</h2>
+              <p className="text-muted-foreground mb-6 text-lg">
                 From luxurious beachfront resorts to boutique heritage hotels and eco-friendly lodges, 
                 Sri Lanka offers a wide range of accommodation options to suit every preference and budget.
               </p>
@@ -328,7 +427,7 @@ const Home: React.FC = () => {
       {/* Call to Action */}
       <section className="py-16 bg-srilanka-blue dark:bg-srilanka-blue/80 text-white section-fade-in hidden">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Experience Sri Lanka?</h2>
+          <h2 className="text-3xl font-bold mb-4 font-playfair">Ready to Experience Sri Lanka?</h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto">
             Start planning your perfect Sri Lankan adventure with UV Travel & Tours today. Our expert team will help you create unforgettable memories.
           </p>
