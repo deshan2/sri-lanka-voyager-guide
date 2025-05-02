@@ -12,6 +12,7 @@ import PlaceDetail from "./pages/PlaceDetail";
 import Adventures from "./pages/Adventures";
 import AdventureDetail from "./pages/AdventureDetail";
 import Accommodations from "./pages/Accommodations";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 // Create a QueryClient instance
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/adventures" element={<Adventures />} />
             <Route path="/adventures/:id" element={<AdventureDetail />} />
             <Route path="/accommodations" element={<Accommodations />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

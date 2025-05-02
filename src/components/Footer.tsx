@@ -58,6 +58,11 @@ const Footer: React.FC = () => {
                   Where to Stay
                 </Link>
               </li>
+              <li>
+                <Link to="/contact" className="text-muted-foreground hover:text-srilanka-green dark:hover:text-srilanka-gold transition-colors">
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
           

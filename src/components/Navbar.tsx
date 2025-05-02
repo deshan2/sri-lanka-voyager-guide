@@ -34,14 +34,6 @@ const Navbar: React.FC<NavbarProps> = ({ toggleDarkMode, isDarkMode }) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleContactClick = () => {
-    toast({
-      title: "Contact information",
-      description: "Email: info@uvtravelandtours.com | Phone: +94 77 123 4567",
-      duration: 5000,
-    });
-  };
-
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -72,9 +64,9 @@ const Navbar: React.FC<NavbarProps> = ({ toggleDarkMode, isDarkMode }) => {
           <Link to="/accommodations" className="text-foreground hover:text-srilanka-green dark:hover:text-srilanka-gold transition-colors">
             Stay
           </Link>
-          <Button variant="ghost" onClick={handleContactClick} className="text-foreground hover:text-srilanka-green dark:hover:text-srilanka-gold">
+          <Link to="/contact" className="text-foreground hover:text-srilanka-green dark:hover:text-srilanka-gold transition-colors">
             Contact
-          </Button>
+          </Link>
           <Button variant="ghost" onClick={toggleDarkMode} size="icon" className="text-foreground">
             {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
           </Button>
@@ -110,9 +102,9 @@ const Navbar: React.FC<NavbarProps> = ({ toggleDarkMode, isDarkMode }) => {
             <Link to="/accommodations" className="text-foreground hover:text-srilanka-green dark:hover:text-srilanka-gold transition-colors py-2 border-b border-border" onClick={() => setIsMenuOpen(false)}>
               Stay
             </Link>
-            <Button variant="ghost" onClick={handleContactClick} className="text-foreground hover:text-srilanka-green dark:hover:text-srilanka-gold py-2" onClickCapture={() => setIsMenuOpen(false)}>
+            <Link to="/contact" className="text-foreground hover:text-srilanka-green dark:hover:text-srilanka-gold transition-colors py-2 border-b border-border" onClick={() => setIsMenuOpen(false)}>
               Contact
-            </Button>
+            </Link>
           </div>
         </div>
       )}
