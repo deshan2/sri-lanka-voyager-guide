@@ -1,16 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Sun, Moon, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 
-interface NavbarProps {
-  toggleDarkMode: () => void;
-  isDarkMode: boolean;
-}
-
-const Navbar: React.FC<NavbarProps> = ({ toggleDarkMode, isDarkMode }) => {
+const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { toast } = useToast();
@@ -67,16 +62,10 @@ const Navbar: React.FC<NavbarProps> = ({ toggleDarkMode, isDarkMode }) => {
           <Link to="/contact" className="text-foreground hover:text-srilanka-green dark:hover:text-srilanka-gold transition-colors">
             Contact
           </Link>
-          <Button variant="ghost" onClick={toggleDarkMode} size="icon" className="text-foreground">
-            {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
-          </Button>
         </div>
 
         {/* Mobile Navigation Toggle */}
         <div className="flex md:hidden items-center space-x-2">
-          <Button variant="ghost" onClick={toggleDarkMode} size="icon" className="text-foreground mr-1">
-            {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
-          </Button>
           <Button variant="ghost" onClick={toggleMenu} size="icon" className="text-foreground">
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </Button>

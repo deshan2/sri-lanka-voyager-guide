@@ -7,6 +7,7 @@ import Footer from './Footer';
 import Chatbot from './Chatbot';
 
 const Layout: React.FC = () => {
+  // Always start in dark mode
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
@@ -57,18 +58,9 @@ const Layout: React.FC = () => {
     };
   }, []);
 
-  const toggleDarkMode = () => {
-    if (isDarkMode) {
-      document.documentElement.classList.remove('dark');
-    } else {
-      document.documentElement.classList.add('dark');
-    }
-    setIsDarkMode(!isDarkMode);
-  };
-
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+      <Navbar />
       <main className="flex-grow pt-16">
         <Outlet />
       </main>
