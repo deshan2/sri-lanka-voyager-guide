@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Our Location</h3>
-                    <p className="text-muted-foreground">42 Temple Road, Colombo 10, Sri Lanka</p>
+                    <p className="text-muted-foreground">Trincomalee, Sri Lanka</p>
                   </div>
                 </div>
 
@@ -106,7 +106,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Call Us</h3>
-                    <p className="text-muted-foreground">+94 77 123 4567</p>
+                    <p className="text-muted-foreground">+94 77 912 9398</p>
                   </div>
                 </div>
 
@@ -122,11 +122,11 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="pt-6">
-                <h3 className="font-semibold mb-4">Office Hours</h3>
+                <h3 className="font-semibold mb-4">Open Day</h3>
                 <div className="space-y-2 text-muted-foreground">
                   <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p>Saturday: 10:00 AM - 4:00 PM</p>
-                  <p>Sunday: Closed</p>
+                  <p>Saturday: 24*7</p>
+                  <p>Sunday: 24*7</p>
                 </div>
               </div>
             </div>
@@ -147,7 +147,7 @@ const Contact: React.FC = () => {
                         <FormItem>
                           <FormLabel>Your Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="John Doe" {...field} />
+                            <Input placeholder="Mitchell" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -161,7 +161,7 @@ const Contact: React.FC = () => {
                         <FormItem>
                           <FormLabel>Email Address</FormLabel>
                           <FormControl>
-                            <Input placeholder="john@example.com" type="email" {...field} />
+                            <Input placeholder="mitchell@example.com" type="email" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>

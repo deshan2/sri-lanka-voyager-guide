@@ -34,13 +34,8 @@ const adventuresData: Adventure[] = [
     type: "Wildlife",
     description: "Encounter leopards, elephants and exotic birds in their natural habitat",
     longDescription: "Embark on an unforgettable wildlife safari through Sri Lanka's renowned national parks. Our expert guides will take you on a journey to witness the island's incredible biodiversity, including the elusive Sri Lankan leopard, majestic elephants, and countless bird species. Experience the thrill of spotting wildlife in their natural habitat while learning about conservation efforts to protect these precious ecosystems.",
-    image: "https://images.unsplash.com/photo-1590668468552-21ff25a2472e?q=80&w=800&auto=format&fit=crop",
-    gallery: [
-      "https://images.unsplash.com/photo-1566146688736-5b5403e6dc9a?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1577717707588-3eceac1207a1?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1581996323777-9fde24488c9b?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1581996323777-9fde24488c9b?q=80&w=800&auto=format&fit=crop"
-    ],
+    image: "https://turkanawildlifesafaris.com/wp-content/uploads/2024/10/Chobe-National-Park-Namibia-Africa-306672-950px-16x7-1.jpg",
+    gallery: [],
     location: "Yala National Park",
     duration: "Full day (6-8 hours)",
     difficulty: "Easy",
@@ -92,12 +87,12 @@ const adventuresData: Adventure[] = [
     type: "Hiking",
     description: "Trek through lush mountains and discover breathtaking viewpoints",
     longDescription: "Lace up your hiking boots and explore Sri Lanka's stunning mountain landscapes on our guided hiking adventures. From the misty peaks of Knuckles Mountain Range to the scenic trails of Horton Plains, our experienced guides will lead you through diverse ecosystems while sharing insights about local flora, fauna, and cultural significance. Whether you're a casual walker or experienced hiker, we offer trails suited to various fitness levels.",
-    image: "https://images.unsplash.com/photo-1575991996683-94471687f3d3?q=80&w=800&auto=format&fit=crop",
+    image: "https://roar.media/english/life/wp-content/uploads/2016/08/Image-6-e1470286562234.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1590739292323-b5a6e2f09b3e?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1586183189334-0f7b9227e8c9?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1586183189334-0f7b9227e8c9?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1586183189334-0f7b9227e8c9?q=80&w=800&auto=format&fit=crop"
+      "https://www.srilankanexpeditions.lk/tour_img/14914755813.jpg",
+      "https://nexttravelsrilanka.com/wp-content/uploads/2023/02/Waterfall-Abseiling.jpg",
+      "https://www.srilankanexpeditions.lk/tour_img/1487649650Adams-Peak-Sri-Lanka.jpg",
+      "https://www.bluelankatours.com/wp-content/uploads/2020/02/Ella-Sri-Lanka.jpg"
     ],
     location: "Ella, Knuckles Mountain Range, Horton Plains",
     duration: "4-8 hours (depending on trail)",
@@ -150,13 +145,9 @@ const adventuresData: Adventure[] = [
     type: "Water Sports",
     description: "Explore vibrant coral reefs and shipwrecks in crystal clear waters",
     longDescription: "Dive into the underwater wonders of Sri Lanka's coastal waters with our professional scuba diving experiences. The warm Indian Ocean waters surrounding the island are home to vibrant coral reefs, fascinating shipwrecks, and an abundance of marine life including reef sharks, rays, turtles, and colorful tropical fish. Whether you're a certified diver or a beginner looking to try your first dive, our PADI-certified instructors will ensure a safe and memorable underwater adventure.",
-    image: "https://images.unsplash.com/photo-1629035818534-90ddbd634e9e?q=80&w=800&auto=format&fit=crop",
+    image: "https://srilankatravelnotes.com/wp-content/uploads/2023/08/p73658-Exploring-the-Best-Dive-Sites-in-Sri-Lanka-10054a5188-278704548.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop"
-    ],
+       ],
     location: "Hikkaduwa, Unawatuna, Trincomalee",
     duration: "Half day (3-4 hours)",
     difficulty: "Moderate",
@@ -210,11 +201,7 @@ const adventuresData: Adventure[] = [
     longDescription: "Experience the thrill of surfing on Sri Lanka's world-renowned beaches with our professional surf lessons. Whether you're a complete beginner looking to stand up on your first wave or an intermediate surfer wanting to improve your technique, our experienced instructors will provide personalized coaching in safe and suitable conditions. Sri Lanka offers ideal surfing conditions with warm water, consistent waves, and beautiful beach settings perfect for learning this exciting sport.",
     image: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=800&auto=format&fit=crop",
     gallery: [
-      "https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=800&auto=format&fit=crop"
-    ],
+       ],
     location: "Arugam Bay, Weligama, Hikkaduwa",
     duration: "2 hours",
     difficulty: "Moderate",
@@ -265,12 +252,12 @@ const adventuresData: Adventure[] = [
     type: "Cultural",
     description: "Learn to prepare authentic Sri Lankan dishes with local ingredients and traditional methods",
     longDescription: "Discover the secrets of Sri Lankan cuisine in our hands-on cooking classes led by experienced local chefs. You'll visit a traditional market to select fresh ingredients before learning to prepare authentic dishes like fragrant rice and curry, hoppers, sambols, and tropical desserts. Understand the unique blend of spices and techniques that make Sri Lankan food so distinctive. The class culminates in enjoying the delicious meal you've prepared in a beautiful setting, with recipes to take home so you can recreate the flavors of Sri Lanka anywhere in the world.",
-    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+    image: "https://www.pelago.com/img/products/LK-Sri%20Lanka/village-tour-with-fishing-and-sri-lankan-lunch/46ae8042-1272-46c2-aa57-07e70111f8f3_village-tour-with-fishing-and-sri-lankan-lunch.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop"
+      "https://www.classicsrilanka.com/blog/wp-content/uploads/2021/08/653x490.jpg",
+      "https://www.bestofceylon.com/images/kandy/cook-with-locals-in-kandy/kandy1.jpg",
+      "https://teacottages.com/wp-content/uploads/2022/11/WhatsApp-Image-2022-11-03-at-11.50.39.jpeg",
+      "https://www.srilankalocaltours.com/wp-content/uploads/Spice-Garden-Cooking-Class-2-week-trip-around-sri-lanka.jpg"
     ],
     location: "Galle, Kandy, Colombo",
     duration: "4-5 hours",
@@ -322,12 +309,8 @@ const adventuresData: Adventure[] = [
     type: "Water Sports",
     description: "Navigate thrilling rapids on Sri Lanka's scenic rivers with expert guides",
     longDescription: "Experience the excitement of whitewater rafting on Sri Lanka's beautiful Kelani River, featured in the movie 'Bridge on the River Kwai'. Our professional guides will lead you through exhilarating rapids ranging from Grade 2 to Grade 4, surrounded by lush rainforest scenery. After a comprehensive safety briefing and paddling instruction, you'll navigate through the rushing waters, working as a team to maneuver through rapids with names like 'Butter Crunch' and 'Killer Fall'. This adventure offers the perfect mix of adrenaline and natural beauty for thrill-seekers of all experience levels.",
-    image: "https://images.unsplash.com/photo-1530866495561-507c9faab2e9?q=80&w=800&auto=format&fit=crop",
+    image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1e/ce/a3.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1530866495561-507c9faab2e9?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1530866495561-507c9faab2e9?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1530866495561-507c9faab2e9?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1530866495561-507c9faab2e9?q=80&w=800&auto=format&fit=crop"
     ],
     location: "Kitulgala",
     duration: "3-4 hours",
@@ -496,12 +479,12 @@ const adventuresData: Adventure[] = [
     type: "Cultural",
     description: "Soar above Sri Lanka's cultural triangle for breathtaking aerial views",
     longDescription: "Float gently above Sri Lanka's spectacular landscapes on a magical hot air balloon adventure at dawn. As the sun rises, you'll drift over ancient ruins, lush forests, lakes, and villages, gaining a bird's eye perspective of the island's beauty. Watch for wildlife from above as elephants and other animals begin their day. Your experienced pilot will point out landmarks and share insights about the regions you're flying over. After landing, celebrate your flight with a traditional champagne toast and breakfast, receiving a flight certificate to commemorate your journey through the skies of Sri Lanka.",
-    image: "https://images.unsplash.com/photo-1464059728276-d2d9f2439a5e?q=80&w=800&auto=format&fit=crop",
+    image: "https://tripjive.com/wp-content/uploads/2024/10/Sigiriya-hot-air-balloon-rides-for-stunning-views.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1464059728276-d2d9f2439a5e?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1464059728276-d2d9f2439a5e?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1464059728276-d2d9f2439a5e?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1464059728276-d2d9f2439a5e?q=80&w=800&auto=format&fit=crop"
+      "https://www.sazylankatours.com/wp-content/uploads/2022/08/Hot-Air-Ballooning-Sri-Lanka.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvsuyZQZPPAiQaA--lawy4jWPyATG8gEDXUg&s",
+      "https://www.lankatourexperts.com/wp-content/uploads/2024/07/Hot-Air-Ballooning-in-Sri-Lanka.webp",
+      
     ],
     location: "Dambulla, Sigiriya, Kandalama",
     duration: "3-4 hours (including 1 hour flight)",
@@ -548,65 +531,7 @@ const adventuresData: Adventure[] = [
       "Return to hotel"
     ]
   },
-  {
-    id: "yoga",
-    name: "Beachside Yoga Retreat",
-    type: "Cultural",
-    description: "Rejuvenate your mind and body with yoga sessions by the Indian Ocean",
-    longDescription: "Immerse yourself in tranquility with our beachside yoga retreats that combine ancient practice with Sri Lanka's natural beauty. Led by experienced yoga instructors, sessions take place on serene beaches or peaceful gardens with the soothing sounds of waves as your backdrop. Whether you're a beginner or experienced practitioner, classes are tailored to all levels, focusing on alignment, breathing, and mindfulness. Beyond yoga, enjoy meditation sessions, healthy cuisine featuring local ingredients, and free time to explore the surrounding natural beauty or simply relax by the ocean.",
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop",
-    gallery: [
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop"
-    ],
-    location: "Mirissa, Unawatuna, Tangalle",
-    duration: "2 hours per session (multi-day packages available)",
-    difficulty: "Moderate",
-    bestTime: "Year-round",
-    included: [
-      "Professional yoga instruction",
-      "Yoga mats and props",
-      "Herbal tea and fresh fruit",
-      "Meditation guidance",
-      "Beach or garden venue",
-      "Optional ayurvedic consultation"
-    ],
-    notIncluded: [
-      "Accommodation (for single sessions)",
-      "Meals (included in retreat packages)",
-      "Transportation to location",
-      "Personal travel insurance",
-      "Gratuities"
-    ],
-    highlights: [
-      "Practice yoga with ocean views and sea breezes",
-      "Learn techniques adaptable to all skill levels",
-      "Combine physical exercise with mental relaxation",
-      "Experience meditation in natural settings",
-      "Connect with like-minded travelers"
-    ],
-    safetyInfo: "Inform instructor of any physical limitations.",
-    suitableFor: "All fitness levels",
-    groupSize: "5-15 participants per class",
-    price: 40,
-    rating: 4.8,
-    reviews: 59,
-    whatToBring: [
-      "Comfortable clothing",
-      "Water bottle",
-      "Small towel",
-      "Sunscreen"
-    ],
-    itinerary: [
-      "Welcome and introduction",
-      "Initial breathing exercises",
-      "Guided yoga practice",
-      "Meditation session",
-      "Refreshments and discussion"
-    ]
-  }
+ 
 ];
 
 export default adventuresData;

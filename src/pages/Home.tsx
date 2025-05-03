@@ -129,9 +129,9 @@ const Home: React.FC = () => {
         
         <div className="relative z-10 container mx-auto h-full flex flex-col justify-center text-white px-4">
           <h1 className="text-4xl md:text-7xl font-bold mb-4 text-shadow font-playfair italic">
-            Discover the Wonder of <span className="text-srilanka-gold">Sri Lanka</span>
+            Discover the Wonder of <span className="text-srilanka-gold"><br />Sri Lanka</span>
           </h1>
-          <p className="text-lg md:text-2xl mb-8 max-w-2xl text-shadow font-light">
+          <p className="text-lg md:text-2xl mb-8 max-w-2xl text-shadow font-light font-serif italic">
             Experience the magic of ancient civilizations, breathtaking landscapes, and vibrant culture with UV Travel & Tours
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
